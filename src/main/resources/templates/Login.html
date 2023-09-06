@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sunbase Customer Management</title>
+</head>
+<body>
+<h1>Sunbase Customer Management</h1>
+
+<!-- Login Form -->
+<h2>Login</h2>
+<form id="loginForm">
+    <label for="login_id">Login ID:</label>
+    <input type="text" id="login_id" name="login_id" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <button type="button" onclick="authenticateUser()">Login</button>
+</form>
+
+<!-- Customer List -->
+<h2>Customer List</h2>
+<button type="button" onclick="getCustomerList()">Get Customer List</button>
+<table id="customerTable" border="1">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="customerList">
+    <!-- Customer data will be displayed here -->
+    </tbody>
+</table>
+
+<!-- Create Customer Form -->
+<h2>Create Customer</h2>
+<form id="createCustomerForm">
+    <label for="create_first_name">First Name:</label>
+    <input type="text" id="create_first_name" name="create_first_name" required><br><br>
+    <label for="create_last_name">Last Name:</label>
+    <input type="text" id="create_last_name" name="create_last_name" required><br><br>
+    <!-- Add other customer fields here -->
+    <button type="button" onclick="createCustomer()">Create Customer</button>
+</form>
+
+<!-- Update Customer Form -->
+<h2>Update Customer</h2>
+<form id="updateCustomerForm">
+    <label for="update_uuid">UUID:</label>
+    <input type="text" id="update_uuid" name="update_uuid" required><br><br>
+    <label for="update_first_name">First Name:</label>
+    <input type="text" id="update_first_name" name="update_first_name" required><br><br>
+    <label for="update_last_name">Last Name:</label>
+    <input type="text" id="update_last_name" name="update_last_name" required><br><br>
+    <!-- Add other customer fields here -->
+    <button type="button" onclick="updateCustomer()">Update Customer</button>
+</form>
+
+<!-- Delete Customer -->
+<h2>Delete Customer</h2>
+<form id="deleteCustomerForm">
+    <label for="delete_uuid">UUID:</label>
+    <input type="text" id="delete_uuid" name="delete_uuid" required><br><br>
+    <button type="button" onclick="deleteCustomer()">Delete Customer</button>
+</form>
+
+<!-- JavaScript Functions -->
+<script src="script.js"></script>
+</body>
+</html>
